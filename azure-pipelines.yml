@@ -10,7 +10,7 @@ pool:
 
 
 stages:
--stage: SAST
+- stage: SAST
 
 steps:
 - task: Maven@4
