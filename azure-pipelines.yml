@@ -65,8 +65,14 @@ steps:
 - task: Docker@2
   inputs:
     containerRegistry: 'Docker'
-    repository: 'Lab-Final-DevSecOps / spring-boot-kubernetes'
+    repository: 'Lab-Final-DevSecOps/spring-boot-kubernetes'
     command: 'build'
     Dockerfile: '**/Dockerfile'
     tags: 'latest'
 
+- script:
+-sudoapt-get-install-y.rpm
+wgethttps://github.com/aquasecurity/trivy/releases/download/ve.27.1/trivy 0.27.1 Linux-64bit.deb
+sudo dpkg -i trivy 0.27.1 Linux-64bit.deb
+trivyimageclagosu/pet-clinic:latest
+displayName:Image-Scan
