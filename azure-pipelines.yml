@@ -8,7 +8,7 @@ stages:
     displayName: 'SAST'
     steps:
 
-- task: Maven@4
+    - task: Maven@4
   inputs:
     mavenPomFile: 'pom.xml'
     publishJUnitResults: true
@@ -19,7 +19,7 @@ stages:
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
 
-- task: SonarCloudPrepare@1
+   - task: SonarCloudPrepare@1
   inputs:
     SonarCloud: 'token-lab-final'
     organization: 'lab-final-devsecops'
@@ -27,7 +27,7 @@ stages:
     projectKey: 'Lab-Final-DevSecOps_spring-boot-kubernetes'
     projectName: 'spring-boot-kubernetes'
 
-- task: Maven@4
+   - task: Maven@4
   inputs:
     gradleWrapperFile: 'gradlew'
     tasks: 'sonarqube'
@@ -41,7 +41,7 @@ stages:
 
 
 
-- task: dependency-check-build-task@6
+   - task: dependency-check-build-task@6
   inputs:
     projectName: 'test-dependecycheck'
     scanPath: '**/*.java'
