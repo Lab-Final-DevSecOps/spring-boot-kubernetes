@@ -1,13 +1,6 @@
 pool:
   vmImage: ubuntu-latest
 
-stages:
-- stage: SAST
-  jobs:
-  - job: SAST
-    displayName: 'SAST'
-    steps:
-
     - task: Maven@4
   inputs:
     mavenPomFile: 'pom.xml'
@@ -38,8 +31,6 @@ stages:
     sqGradlePluginVersionChoice: 'specify'
     sonarQubeGradlePluginVersion: '3.3'
     spotBugsAnalysis: false
-
-
 
    - task: dependency-check-build-task@6
   inputs:
