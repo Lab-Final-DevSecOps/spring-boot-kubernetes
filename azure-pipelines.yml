@@ -42,3 +42,10 @@ steps:
     spotBugsAnalysis: false
 
 
+
+- task: dependency-check-build-task@6
+  inputs:
+    projectName: 'test-dependecycheck'
+    scanPath: '$(Build.SourcesDirectory)/build/libs'
+    format: 'HTML'
+
