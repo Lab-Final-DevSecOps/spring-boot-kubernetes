@@ -8,10 +8,10 @@
 pool:
   vmImage: ubuntu-latest
 
-stages: SAST
-jobs:
-- job:SAST
-  displayName: 'SAST'
+#stages: SAST
+#jobs:
+#- job:SAST
+#  displayName: ' SAST '
 steps:
 
 - task: Maven@4
