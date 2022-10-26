@@ -10,9 +10,6 @@ pool:
 
 steps:
 
-stages:
-- stage: SAST
-
 - task: Maven@4
   inputs:
     mavenPomFile: 'pom.xml'
