@@ -19,7 +19,7 @@ stages:
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
 
-   - task: SonarCloudPrepare@1
+    - task: SonarCloudPrepare@1
   inputs:
     SonarCloud: 'token-lab-final'
     organization: 'lab-final-devsecops'
