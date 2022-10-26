@@ -11,9 +11,9 @@ pool:
 stages: 
 - stage: SAST
   jobs:
-- job: SAST
-  displayName: 'SAST'
-  steps:
+  - job: SAST
+    displayName: 'SAST'
+    steps:
 
 - task: Maven@4
   inputs:
