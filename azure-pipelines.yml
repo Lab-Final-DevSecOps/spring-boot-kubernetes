@@ -53,4 +53,20 @@ steps:
     scanPath: '**/*.java'
     format: 'HTML'
 
+- task: DockerInstaller@0
+  inputs:
+    dockerVersion: '17.09.0-ce'
+
+- task: Docker@2
+  inputs:
+    containerRegistry: 'Docker'
+    command: 'login'
+
+- task: Docker@2
+  inputs:
+    containerRegistry: 'Docker'
+    repository: 'Lab-Final-DevSecOps / spring-boot-kubernetes'
+    command: 'build'
+    Dockerfile: '**/Dockerfile'
+    tags: 'latest'
 
