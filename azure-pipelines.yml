@@ -8,8 +8,11 @@
 pool:
   vmImage: ubuntu-latest
 
-steps:
 
+stages:
+-stage: SAST
+
+steps:
 - task: Maven@4
   inputs:
     mavenPomFile: 'pom.xml'
