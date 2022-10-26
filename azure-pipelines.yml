@@ -10,7 +10,7 @@ pool:
 
 stages: 
 - stage: SAST
-Jobs: 
+  jobs:
 - job: SAST
   displayName: 'SAST'
   steps:
