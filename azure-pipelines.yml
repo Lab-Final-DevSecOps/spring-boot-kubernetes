@@ -5,9 +5,8 @@ stages:
 - stage: SAST
   jobs:
   - job: SAST
-  displayName: 'SAST'
-
-  steps:
+    displayName: 'SAST'
+    steps:
 
 - task: Maven@4
   inputs:
