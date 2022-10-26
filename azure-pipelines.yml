@@ -8,6 +8,10 @@
 pool:
   vmImage: ubuntu-latest
 
+stages: SAST
+jobs:
+  job:SAST
+  displayName: 'SAST'
 steps:
 
 - task: Maven@4
@@ -48,4 +52,5 @@ steps:
     projectName: 'test-dependecycheck'
     scanPath: '**/*.java'
     format: 'HTML'
+
 
